@@ -78,3 +78,6 @@ android {
         jvmToolchain(17)
     }
 }
+dependencies {
+    implementation("androidx.compose.material3:material3:1.1.2")
+}

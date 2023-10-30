@@ -32,7 +32,7 @@ fun App() {
             }
             AnimatedVisibility(showImage) {
                 KamelImage(
-                    asyncPainterResource("https://sebastianaigner.github.io/demo-image-api/pigeon/vladislav-nikonov-yVYaUSwkTOs-unsplash.jpg"),
+                    asyncPainterResource("https://unsplash.com/photos/grayscale-photo-of-man-working-out-sHfo3WOgGTU"),
                     null
                 )
             }
