@@ -1,0 +1,3 @@
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
+
+sealed interface ProfilePageEvent
