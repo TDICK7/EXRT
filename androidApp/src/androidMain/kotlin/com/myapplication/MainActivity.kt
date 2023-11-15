@@ -10,7 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            MainView()
+            App(
+                darkTheme = isSystemInDarkTheme(),
+                dynamicColor = true
+            )
         }
     }
 }

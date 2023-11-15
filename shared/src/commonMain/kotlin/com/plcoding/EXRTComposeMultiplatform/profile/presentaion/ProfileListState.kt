@@ -3,9 +3,10 @@ package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 
 data class ProfileListState(
-    val profiles: List<Profile> = emptyList(),
+    val profile: List<Profile> = emptyList(),
     val recentlyViewedProfile: List<Profile> = emptyList(),
     val selectedFriendProfile: Profile? = null,
+    val isFriendProfilePublic: Boolean = false,
     val isProfilePageOpen: Boolean = false,
     val isFriendProfilePageOpen: Boolean = false,
     val firstNameError: String? = null,
