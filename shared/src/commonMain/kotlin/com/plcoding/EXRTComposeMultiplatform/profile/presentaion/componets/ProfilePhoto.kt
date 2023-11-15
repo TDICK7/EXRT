@@ -26,9 +26,9 @@ fun ProfilePhoto (
     iconSize: Dp = 25.dp
 
 ){
-    val bitmap = rememberBitmapFromBytes(profile?.profilePhoto)
+    val bitmap = rememberBitmapFromBytes(profile?.photoBytes)
     val profileModifier = modifier.clip(RoundedCornerShape(35))
-    if(profile?.profilePhoto != null) {
+    //if(profile?.profilePhoto != null)
         if (bitmap != null) {
             Image(
                 bitmap = bitmap,
@@ -36,8 +36,7 @@ fun ProfilePhoto (
                 modifier = profileModifier,
                 contentScale = ContentScale.Fit
             )
-        }
-    } else {
+        } else {
         Box(
             modifier = profileModifier
                 .background(MaterialTheme.colorScheme.secondaryContainer),

@@ -6,6 +6,7 @@ data class Profile(
     val email: String,
     val username: String,
     val workoutTime: Int,
+    val photoBytes: ByteArray?,
     val weight: Long,
     val height: String,
     val gender: Boolean,

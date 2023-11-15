@@ -33,7 +33,8 @@ private val profile = (1..2).map {
         username = "trevordick07",
         weight = 160,
         workoutTime = 70,
-        profilePrivate = true
+        profilePrivate = true,
+        photoBytes = null
     )
 }
 

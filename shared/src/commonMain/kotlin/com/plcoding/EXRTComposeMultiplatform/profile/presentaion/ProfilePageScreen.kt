@@ -10,7 +10,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material.icons.rounded.PersonAdd
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -48,17 +47,15 @@ fun ProfilePageScreen (
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(20.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
-        ){
+        ) {
             item {
-                Text (
-                    text = "My Proifle",
-                    modifer = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
+                Text(
+                    text = "Leaderboard",
+                    modifier = Modifier.fillMaxWidth()
+                        .padding(16.dp),
                     fontWeight = FontWeight.Bold
-                    )
+                )
             }
-
             items(state.profile) { profile ->
                 ProfilePageList(
                     profile = profile,
