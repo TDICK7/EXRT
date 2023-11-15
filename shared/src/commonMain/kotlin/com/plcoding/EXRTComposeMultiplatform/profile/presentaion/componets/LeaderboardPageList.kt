@@ -25,7 +25,7 @@ fun LeaderboardPageList(profile: Profile, modifier: Modifier = Modifier) {
         Spacer(Modifier.width(16.dp))
 
         Text(
-            text = "${profile.firstName} ${profile.lastName}"
+            text = "${profile.username} ${profile.workoutTime} mins"
         )
     }
 }

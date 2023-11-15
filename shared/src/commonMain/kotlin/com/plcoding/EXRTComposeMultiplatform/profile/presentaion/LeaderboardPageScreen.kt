@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.componets.ProfilePageList
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.componets.LeaderboardPageList
 
 @Composable
 fun ProfilePageScreen (state: LeaderboardListState, newProfile: Profile?, onEvent: (ProfilePageEvent) -> Unit) {
@@ -53,7 +53,7 @@ fun ProfilePageScreen (state: LeaderboardListState, newProfile: Profile?, onEven
                 )
             }
             items(state.profiles) { profile ->
-                ProfilePageList(
+                LeaderboardPageList(
                     profile = profile,
                     modifier = Modifier
                         .fillMaxWidth()

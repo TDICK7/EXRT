@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.asStateFlow
 class ProfilePageViewModel: ViewModel() {
     private val _state = MutableStateFlow(LeaderboardListState(
         profiles = profiles
-    )
+        )
     )
 
     val state = _state.asStateFlow()
@@ -23,7 +23,7 @@ class ProfilePageViewModel: ViewModel() {
     }
 }
 
-private val profiles = (1..5).map {
+private val profiles = (1..20).map {
     Profile(
         email = "Trevordick07@outlook.com",
         firstName = "Trevor",
