@@ -2,8 +2,8 @@ package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
 
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 
-data class ProfileListState(
-    val profile: List<Profile> = emptyList(),
+data class LeaderboardListState(
+    val profiles: List<Profile> = emptyList(),
     val recentlyViewedProfile: List<Profile> = emptyList(),
     val selectedFriendProfile: Profile? = null,
     val isFriendProfilePublic: Boolean = false,

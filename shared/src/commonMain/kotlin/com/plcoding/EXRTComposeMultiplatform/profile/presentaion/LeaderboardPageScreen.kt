@@ -23,11 +23,7 @@ import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.componets.ProfilePageList
 
 @Composable
-fun ProfilePageScreen (
-    state: ProfileListState,
-    newProfile: Profile?,
-    onEvent: (ProfilePageEvent) -> Unit,
-){
+fun ProfilePageScreen (state: LeaderboardListState, newProfile: Profile?, onEvent: (ProfilePageEvent) -> Unit) {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
@@ -38,7 +34,7 @@ fun ProfilePageScreen (
             ) {
                 Icon(
                     imageVector = Icons.Rounded.PersonAdd,
-                    contentDescription = "Add Profile Pic",
+                    contentDescription = "Add Friend",
                 )
             }
         }
@@ -56,7 +52,7 @@ fun ProfilePageScreen (
                     fontWeight = FontWeight.Bold
                 )
             }
-            items(state.profile) { profile ->
+            items(state.profiles) { profile ->
                 ProfilePageList(
                     profile = profile,
                     modifier = Modifier

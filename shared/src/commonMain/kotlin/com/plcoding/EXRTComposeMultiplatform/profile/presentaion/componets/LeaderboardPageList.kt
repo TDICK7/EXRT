@@ -12,11 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 
 @Composable
-fun ProfilePageList(
-    profile: Profile,
-    modifier: Modifier = Modifier,
-
-){
+fun LeaderboardPageList(profile: Profile, modifier: Modifier = Modifier) {
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
