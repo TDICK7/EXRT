@@ -23,12 +23,12 @@ import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.componets.LeaderboardPageList
 
 @Composable
-fun ProfilePageScreen (state: LeaderboardListState, newProfile: Profile?, onEvent: (ProfilePageEvent) -> Unit) {
+fun LeaderboardPageScreen (state: LeaderboardListState, newProfile: Profile?, onEvent: (LeaderboardPageEvent) -> Unit) {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    onEvent(ProfilePageEvent.SaveProfilePage)
+                    onEvent(LeaderboardPageEvent.SaveProfilePage)
                 },
                 shape = RoundedCornerShape(20.dp)
             ) {
@@ -58,7 +58,7 @@ fun ProfilePageScreen (state: LeaderboardListState, newProfile: Profile?, onEven
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
-                            onEvent(ProfilePageEvent.SelectProfile(profile))
+                            onEvent(LeaderboardPageEvent.SelectProfile(profile))
                         }
                         .padding(horizontal = 16.dp)
                 )
