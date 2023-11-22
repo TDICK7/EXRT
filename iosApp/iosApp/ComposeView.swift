@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import shared
+import HealthKit
 
 struct ComposeView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {

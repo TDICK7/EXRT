@@ -39,4 +39,5 @@ android {
 dependencies {
     implementation("androidx.activity:activity-ktx:1.8.0")
     implementation("androidx.activity:activity-compose:1.3.0-alpha07")
+    implementation("androidx.navigation:navigation-common-ktx:2.7.5")
 }

@@ -48,6 +48,9 @@ kotlin {
                 implementation("dev.icerock.moko:mvvm-compose:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+                implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc10")
+                implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0-rc10")
+                implementation("cafe.adriel.voyager:voyager-transitions:1.0.0-rc10")
             }
         }
         val commonTest by getting {
@@ -90,9 +93,6 @@ kotlin {
 android {
     namespace = "com.plcoding.contactscomposemultiplatform"
     compileSdk = 33
-    defaultConfig {
-        minSdk = 24
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -100,6 +100,7 @@ android {
 }
 
 dependencies {
+    implementation("com.android.car.ui:car-ui-lib:2.5.1")
     implementation("androidx.core:core:1.10.1")
     commonMainApi("dev.icerock.moko:mvvm-core:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-compose:0.16.1")
