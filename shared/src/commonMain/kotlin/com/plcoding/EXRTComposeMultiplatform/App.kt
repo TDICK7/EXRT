@@ -6,8 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.ProfilePageScreen
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.ProfilePageViewModel
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfilePageScreen
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfilePageViewModel
 import dev.icerock.moko.mvvm.compose.getViewModel
 import dev.icerock.moko.mvvm.compose.viewModelFactory
 
@@ -29,6 +29,7 @@ fun App(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
+
         ProfilePageScreen(
             state = state,
             newProfile = viewModel.newProfile,

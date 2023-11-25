@@ -1,4 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard
 
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 
@@ -10,7 +10,7 @@ sealed interface LeaderboardPageEvent {
     data class OnUsernameChanged (val value: String): LeaderboardPageEvent
     class OnProfilePhotoChanged (val value: ByteArray): LeaderboardPageEvent
     object OnFriendTabPicked: LeaderboardPageEvent
-    object SaveProfilePage: LeaderboardPageEvent
+    object SaveLeaderBoard: LeaderboardPageEvent
     data class SelectProfile (val value: Profile): LeaderboardPageEvent
     data class EditProfile(val value: Profile): LeaderboardPageEvent
     object DeleteProfile: LeaderboardPageEvent

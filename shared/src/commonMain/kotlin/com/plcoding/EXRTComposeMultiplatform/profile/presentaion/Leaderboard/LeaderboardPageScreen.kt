@@ -1,4 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -28,7 +28,7 @@ fun LeaderboardPageScreen (state: LeaderboardListState, newProfile: Profile?, on
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    onEvent(LeaderboardPageEvent.SaveProfilePage)
+                    onEvent(LeaderboardPageEvent.SaveLeaderBoard)
                 },
                 shape = RoundedCornerShape(20.dp)
             ) {
