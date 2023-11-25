@@ -1,4 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile
 
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 

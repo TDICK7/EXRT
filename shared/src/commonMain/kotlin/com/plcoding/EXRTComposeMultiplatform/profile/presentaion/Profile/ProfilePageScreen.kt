@@ -1,5 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
-
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

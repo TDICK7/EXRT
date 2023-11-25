@@ -1,4 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

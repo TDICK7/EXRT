@@ -1,4 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -9,7 +9,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 class LeaderboardPageViewModel: ViewModel() {
-    private val _state = MutableStateFlow(LeaderboardListState(
+    private val _state = MutableStateFlow(
+        LeaderboardListState(
         profiles = profiles
         )
     )
