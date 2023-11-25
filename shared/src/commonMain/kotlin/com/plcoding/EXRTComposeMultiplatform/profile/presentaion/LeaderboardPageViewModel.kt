@@ -18,7 +18,7 @@ class LeaderboardPageViewModel: ViewModel() {
     var newProfile: Profile? by mutableStateOf(null)
         private set
 
-    fun onEvent(event: ProfilePageEvent) {
+    fun onEvent(event: LeaderboardPageEvent) {
 
     }
 }

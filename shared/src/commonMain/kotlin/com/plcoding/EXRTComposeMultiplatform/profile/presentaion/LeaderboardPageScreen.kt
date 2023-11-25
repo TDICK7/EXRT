@@ -28,7 +28,7 @@ fun LeaderboardPageScreen (state: LeaderboardListState, newProfile: Profile?, on
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    onEvent(LeaderboardPageEvent.SaveProfilePage)
+                    onEvent(LeaderboardPageEvent.SaveLeaderBoard)
                 },
                 shape = RoundedCornerShape(20.dp)
             ) {

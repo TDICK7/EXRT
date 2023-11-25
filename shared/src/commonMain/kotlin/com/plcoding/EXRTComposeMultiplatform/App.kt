@@ -6,8 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.ProfilePageScreen
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.ProfilePageViewModel
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.LeaderboardPageScreen
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.LeaderboardPageViewModel
 import dev.icerock.moko.mvvm.compose.getViewModel
 import dev.icerock.moko.mvvm.compose.viewModelFactory
 
@@ -20,7 +20,7 @@ fun App(
     val viewModel = getViewModel(
         key = "Profile-page-screen",
         factory = viewModelFactory {
-            ProfilePageViewModel()
+            LeaderboardPageViewModel()
         }
     )
     val state by viewModel.state.collectAsState()
@@ -29,7 +29,8 @@ fun App(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        ProfilePageScreen(
+
+        LeaderboardPageScreen(
             state = state,
             newProfile = viewModel.newProfile,
             onEvent = viewModel::onEvent
