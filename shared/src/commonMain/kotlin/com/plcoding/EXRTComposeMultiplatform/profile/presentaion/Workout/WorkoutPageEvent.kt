@@ -1,0 +1,3 @@
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Workout
+
+sealed interface WorkoutPageEvent
