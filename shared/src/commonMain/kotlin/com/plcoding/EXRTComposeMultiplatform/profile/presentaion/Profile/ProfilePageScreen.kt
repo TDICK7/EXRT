@@ -71,7 +71,7 @@ fun ProfilePageScreen (state: ProfilePageState, newProfile: Profile?, onEvent: (
                             selected = selectedItemIndex == index,
                             onClick = {
                                 selectedItemIndex = index
-                                // navController.navigate(item.title)
+                                //TODO(navController.navigate(item.title))
                             },
                             label = {
                                 Text(text = item.title)
