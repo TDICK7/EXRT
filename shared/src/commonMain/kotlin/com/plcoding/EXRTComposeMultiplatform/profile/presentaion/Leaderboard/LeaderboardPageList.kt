@@ -1,4 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.componets
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -10,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.componets.ProfilePhoto
 
 @Composable
 fun LeaderboardPageList(profile: Profile, modifier: Modifier = Modifier) {
