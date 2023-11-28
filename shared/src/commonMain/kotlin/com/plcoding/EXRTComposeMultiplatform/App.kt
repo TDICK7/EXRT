@@ -57,13 +57,13 @@ fun App(
             selectedIcon = Icons.Filled.DirectionsRun,
             unselectedIcon = Icons.Outlined.DirectionsRun,
             hasNews = false,
-            badgeCount = 45
+            badgeCount = 1
         ),
         BottomNavigationItem(
             title = "Leaderboard",
             selectedIcon = Icons.Filled.EmojiEvents,
             unselectedIcon = Icons.Outlined.EmojiEvents,
-            hasNews = true,
+            hasNews = false,
         ),
     )
     var selectedItemIndex by rememberSaveable {
