@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.EmojiEvents
@@ -24,14 +25,11 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 
-object ProfileTab : Tab {
+object LeaderboardTab : Tab {
 
     val state = LeaderboardListState()
-    val profile: Profile?
-        get() {
-            TODO()
-        }
-    val onEvent: (LeaderboardPageEvent()) -> Unit
+    val profile: Profile? = null
+
     @Composable
     override fun Content() {
 
@@ -39,7 +37,7 @@ object ProfileTab : Tab {
             floatingActionButton = {
                 FloatingActionButton(
                     onClick = {
-                        onEvent(LeaderboardPageEvent.SaveLeaderBoard)
+                        LeaderboardPageEvent.SaveLeaderBoard
                     },
                     shape = RoundedCornerShape(20.dp)
                 ) {
@@ -69,7 +67,7 @@ object ProfileTab : Tab {
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable {
-                                onEvent(LeaderboardPageEvent.SelectUser(profile))
+                                LeaderboardPageEvent.SelectUser(profile)
                             }
                             .padding(horizontal = 16.dp)
                     )

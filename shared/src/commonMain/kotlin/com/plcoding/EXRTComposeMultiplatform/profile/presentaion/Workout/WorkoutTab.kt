@@ -1,4 +1,4 @@
-package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile
+package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Workout
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -6,7 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.DirectionsRun
 import androidx.compose.material.icons.outlined.Scale
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalTextStyle
@@ -28,7 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 
-object ProfileTab : Tab {
+object WorkoutTab : Tab {
     @Composable
     override fun Content() {
         Surface(
@@ -81,8 +81,8 @@ object ProfileTab : Tab {
         @Composable
         get() {
             val index: UShort = 0u
-            val icon = rememberVectorPainter(Icons.Default.Person)
-            val title = "Profile"
+            val icon = rememberVectorPainter(Icons.Default.DirectionsRun)
+            val title = "Workout"
 
             return TabOptions(
                 index, title, icon

@@ -12,6 +12,7 @@ import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard.LeaderboardTab
 import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfileTab
 
 
@@ -24,7 +25,7 @@ fun App(darkTheme: Boolean, dynamicColor: Boolean) {
                 bottomBar = {
                     NavigationBar {
                         TabItem(ProfileTab)
-                        TabItem(ProfileTab)
+                        TabItem(LeaderboardTab)
                         TabItem(ProfileTab)
                     }
                 }
