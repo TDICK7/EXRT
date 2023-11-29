@@ -50,6 +50,8 @@ kotlin {
                 implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
                 implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0-rc10")
                 implementation("cafe.adriel.voyager:voyager-transitions:1.0.0-rc10")
+                api("moe.tlaster:precompose:1.5.7")
+                implementation("co.touchlab:kermit:2.0.2")
             }
         }
         val commonTest by getting {
@@ -103,6 +105,7 @@ android {
 
 dependencies {
     implementation("androidx.core:core:1.10.1")
+    implementation("androidx.activity:activity-ktx:1.8.1")
     commonMainApi("dev.icerock.moko:mvvm-core:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-compose:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-flow:0.16.1")

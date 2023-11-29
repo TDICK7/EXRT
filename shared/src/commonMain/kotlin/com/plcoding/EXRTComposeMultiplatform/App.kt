@@ -1,4 +1,5 @@
 package com.plcoding.EXRTComposeMultiplatform
+
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DirectionsRun
@@ -25,101 +26,94 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.BottomNavigationItem
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfilePageScreen
 import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfilePageViewModel
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfileTab.Content
 import dev.icerock.moko.mvvm.compose.getViewModel
 import dev.icerock.moko.mvvm.compose.viewModelFactory
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun App(
-    darkTheme: Boolean,
-    dynamicColor: Boolean
-) {
-    val viewModel = getViewModel(
-        key = "Profile-page-screen",
-        factory = viewModelFactory {
-            ProfilePageViewModel()
-        }
-    )
-    val state by viewModel.state.collectAsState()
+fun App(darkTheme: Boolean, dynamicColor: Boolean) {
+        val viewModel = getViewModel(
+            key = "Profile-page-screen",
+            factory = viewModelFactory {
+                ProfilePageViewModel()
+            }
+        )
+        val state by viewModel.state.collectAsState()
 
-    val items = listOf(
-        BottomNavigationItem(
-            title = "Profile",
-            selectedIcon = Icons.Filled.Person,
-            unselectedIcon = Icons.Outlined.Person,
-            hasNews = false,
-        ),
-        BottomNavigationItem(
-            title = "Workout",
-            selectedIcon = Icons.Filled.DirectionsRun,
-            unselectedIcon = Icons.Outlined.DirectionsRun,
-            hasNews = false,
-            badgeCount = 1
-        ),
-        BottomNavigationItem(
-            title = "Leaderboard",
-            selectedIcon = Icons.Filled.EmojiEvents,
-            unselectedIcon = Icons.Outlined.EmojiEvents,
-            hasNews = false,
-        ),
-    )
-    var selectedItemIndex by rememberSaveable {
-        mutableStateOf(0)
-    }
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
-    ) {
-        Scaffold(
-            bottomBar = {
-                NavigationBar {
-                    items.forEachIndexed { index, item ->
-                        NavigationBarItem(
-                            selected = selectedItemIndex == index,
-                            onClick = {
-                                selectedItemIndex = index
-                                //TODO(navController.navigate(item.title))
-                            },
-                            label = {
-                                Text(text = item.title)
-                            },
-                            alwaysShowLabel = false,
-                            icon = {
-                                BadgedBox(
-                                    badge = {
-                                        if(item.badgeCount != null) {
-                                            Badge {
-                                                Text(text = item.badgeCount.toString())
+        val items = listOf(
+            BottomNavigationItem(
+                title = "Profile",
+                selectedIcon = Icons.Filled.Person,
+                unselectedIcon = Icons.Outlined.Person,
+                hasNews = false,
+            ),
+            BottomNavigationItem(
+                title = "Workout",
+                selectedIcon = Icons.Filled.DirectionsRun,
+                unselectedIcon = Icons.Outlined.DirectionsRun,
+                hasNews = false,
+                badgeCount = 1
+            ),
+            BottomNavigationItem(
+                title = "Leaderboard",
+                selectedIcon = Icons.Filled.EmojiEvents,
+                unselectedIcon = Icons.Outlined.EmojiEvents,
+                hasNews = false,
+            ),
+        )
+        var selectedItemIndex by rememberSaveable {
+            mutableStateOf(0)
+        }
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            Scaffold(
+                bottomBar = {
+                    NavigationBar {
+                        items.forEachIndexed { index, item ->
+                            NavigationBarItem(
+                                selected = selectedItemIndex == index,
+                                onClick = {
+                                    selectedItemIndex = index
+                                    //TODO(navController.navigate(item.title))
+                                },
+                                label = {
+                                    Text(text = item.title)
+                                },
+                                alwaysShowLabel = false,
+                                icon = {
+                                    BadgedBox(
+                                        badge = {
+                                            if (item.badgeCount != null) {
+                                                Badge {
+                                                    Text(text = item.badgeCount.toString())
+                                                }
+                                            } else if (item.hasNews) {
+                                                Badge()
                                             }
-                                        } else if(item.hasNews) {
-                                            Badge()
                                         }
+                                    ) {
+                                        Icon(
+                                            imageVector = if (index == selectedItemIndex) {
+                                                item.selectedIcon
+                                            } else item.unselectedIcon,
+                                            contentDescription = item.title
+                                        )
                                     }
-                                ) {
-                                    Icon(
-                                        imageVector = if (index == selectedItemIndex) {
-                                            item.selectedIcon
-                                        } else item.unselectedIcon,
-                                        contentDescription = item.title
-                                    )
                                 }
-                            }
-                        )
+                            )
+                        }
                     }
                 }
+            ) {
+                Content()
             }
-        ) {
-                ProfilePageScreen(
-                    state = state,
-                    newProfile = viewModel.newProfile,
-                    onEvent = viewModel::onEvent
-            )
         }
     }
-}
 
 
 
