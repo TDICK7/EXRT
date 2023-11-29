@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.outlined.Scale
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalTextStyle
@@ -20,12 +21,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
-import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.tab.Tab
+import cafe.adriel.voyager.navigator.tab.TabOptions
 
-class ProfilePageScreen: Screen {
+object ProfileTab : Tab {
     @Composable
     override fun Content() {
         Surface(
@@ -74,6 +77,15 @@ class ProfilePageScreen: Screen {
             }
         }
     }
+    override val options: TabOptions
+        @Composable
+        get() {
+            val index: UShort = 0u
+            val icon = rememberVectorPainter(Icons.Default.Person)
+            val title = "Profile"
+
+            return TabOptions(
+                index, title, icon
+            )
+        }
 }
-
-
