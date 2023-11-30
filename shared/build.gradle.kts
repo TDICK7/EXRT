@@ -48,6 +48,7 @@ kotlin {
                 implementation("dev.icerock.moko:mvvm-compose:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+                implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc10")
                 implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0-rc10")
                 implementation("cafe.adriel.voyager:voyager-transitions:1.0.0-rc10")
             }

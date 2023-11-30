@@ -3,12 +3,12 @@ package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import cafe.adriel.voyager.core.model.ScreenModel
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
-import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-class LeaderboardPageViewModel: ViewModel() {
+class LeaderboardPageViewModel: ScreenModel {
     private val _state = MutableStateFlow(
         LeaderboardListState(
         profiles = profiles
