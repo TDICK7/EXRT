@@ -14,6 +14,7 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
 import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Leaderboard.LeaderboardTab
 import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfileTab
+import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Workout.WorkoutTab
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -24,8 +25,8 @@ fun App(darkTheme: Boolean, dynamicColor: Boolean) {
             Scaffold (
                 bottomBar = {
                     NavigationBar {
-                        TabItem(ProfileTab)
                         TabItem(LeaderboardTab)
+                        TabItem(WorkoutTab)
                         TabItem(ProfileTab)
                     }
                 }
