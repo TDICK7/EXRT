@@ -16,7 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.plcoding.EXRTComposeMultiplatform.core.presentation.rememberBitmapFromBytes
+import com.plcoding.EXRTComposeMultiplatform.core.util.rememberBitmapFromBytes
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
 
 @Composable

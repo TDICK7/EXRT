@@ -1,6 +1,6 @@
 package com.plcoding.EXRTComposeMultiplatform.profile.presentaion.componets
 
-import androidx.compose.foundation.background
+/*import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -27,8 +27,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.plcoding.EXRTComposeMultiplatform.profile.domain.Profile
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfilePageEvent
-import com.plcoding.EXRTComposeMultiplatform.profile.presentaion.Profile.ProfilePageState
 
 @Composable
 fun AddContactSheet( state: ProfilePageState, profile: Profile?, isOpen: Boolean, onEvent: (ProfilePageEvent) -> Unit, modifier: Modifier = Modifier ) {
@@ -180,3 +178,4 @@ private fun ContactTextField(
 }
 
 
+*/

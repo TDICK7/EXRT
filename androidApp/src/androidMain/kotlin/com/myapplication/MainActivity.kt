@@ -10,8 +10,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             App(
-                darkTheme = false,
-                dynamicColor = true
+                //darkTheme = false,
+                //dynamicColor = true
             )
         }
     }

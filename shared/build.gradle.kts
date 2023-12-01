@@ -5,6 +5,15 @@ plugins {
     //id("com.squareup.sqldelight")
 }
 
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven(url = "https://jitpack.io")
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+}
+
 kotlin {
     android {
         compilations.all {
@@ -51,6 +60,10 @@ kotlin {
                 implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc10")
                 implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0-rc10")
                 implementation("cafe.adriel.voyager:voyager-transitions:1.0.0-rc10")
+                implementation("io.insert-koin:koin-core:3.2.0")
+                implementation("io.insert-koin:koin-compose:1.1.0")
+                //implementation("androidx.compose.material3:material3-window-size-class:1.0.0")
+                implementation("com.russhwolf:multiplatform-settings:1.1.1")
             }
         }
         val commonTest by getting {
