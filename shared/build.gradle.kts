@@ -2,7 +2,12 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
-    //id("com.squareup.sqldelight")
+    id("app.cash.sqldelight") version "2.0.0"
+}
+
+repositories {
+    mavenCentral()
+    google()
 }
 
 kotlin {
@@ -63,6 +68,7 @@ kotlin {
                 implementation("com.squareup.sqldelight:android-driver:1.5.5")
                 implementation("androidx.appcompat:appcompat:1.6.1")
                 implementation("androidx.activity:activity-compose:1.7.2")
+                implementation("app.cash.sqldelight:android-driver:2.0.0")
             }
         }
         val androidUnitTest by getting
@@ -71,7 +77,7 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependencies {
-                implementation("com.squareup.sqldelight:native-driver:1.5.5")
+                implementation("app.cash.sqldelight:native-driver:2.0.0")
             }
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
@@ -99,6 +105,14 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+sqldelight {
+    databases {
+        create("ExrtDatabase") {
+            packageName.set("com.exrt.exrtcomposemultiplatform.database")
+        }
     }
 }
 
