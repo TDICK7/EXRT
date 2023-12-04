@@ -1,14 +1,15 @@
 package com.plcoding.EXRTComposeMultiplatform.profile.domain
 
 data class Profile(
+    val id: Long,
     val firstName: String,
     val lastName: String,
     val email: String,
     val username: String,
-    val workoutTime: Int,
+    val workoutTime: Long,
     val photoBytes: ByteArray?,
     val weight: Long,
     val height: String,
-    val gender: Boolean,
+    val gender: String,
     val profilePrivate: Boolean = true
 )

@@ -31,51 +31,7 @@ import cafe.adriel.voyager.navigator.tab.TabOptions
 object WorkoutTab : Tab {
     @Composable
     override fun Content() {
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colorScheme.background
-        ) {
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                var filledText by remember {
-                    mutableStateOf("")
-                }
-                TextField(
-                    value = filledText,
-                    onValueChange = { filledText = it },
-                    textStyle = LocalTextStyle.current.copy(
-                        textAlign = TextAlign.Right
-                    ),
-                    label = {
-                        Text(text = "Enter your Weight")
-                    },
-                    placeholder = {
-                        Text(text = "Weight")
-                    },
-                    leadingIcon = {
-                        Icon(
-                            imageVector = Icons.Outlined.Scale,
-                            contentDescription = "Scale"
-                        )
-                    },
-                    suffix = {
-                        Text(text = "Lb")
-                    },
-                    keyboardOptions = KeyboardOptions(
-                        keyboardType = KeyboardType.Text,
-                        imeAction = ImeAction.Next
-                    ),
-                    keyboardActions = KeyboardActions(
-                        onNext = {
-                            println("Test")
-                        }
-                    )
-                )
-            }
-        }
+        WorkoutTextField()
     }
     override val options: TabOptions
         @Composable
@@ -88,4 +44,53 @@ object WorkoutTab : Tab {
                 index, title, icon
             )
         }
+}
+
+@Composable
+fun WorkoutTextField() {
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colorScheme.background
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            var filledText by remember {
+                mutableStateOf("")
+            }
+            TextField(
+                value = filledText,
+                onValueChange = { filledText = it },
+                textStyle = LocalTextStyle.current.copy(
+                    textAlign = TextAlign.Right
+                ),
+                label = {
+                    Text(text = "Enter your Exercise")
+                },
+                placeholder = {
+                    Text(text = "Weight")
+                },
+                leadingIcon = {
+                    Icon(
+                        imageVector = Icons.Outlined.Scale,
+                        contentDescription = "Scale"
+                    )
+                },
+                suffix = {
+                    Text(text = "Lb")
+                },
+                keyboardOptions = KeyboardOptions(
+                    keyboardType = KeyboardType.Text,
+                    imeAction = ImeAction.Next
+                ),
+                keyboardActions = KeyboardActions(
+                    onNext = {
+                        println("Test")
+                    }
+                )
+            )
+        }
+    }
 }

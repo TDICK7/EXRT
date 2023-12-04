@@ -1,11 +1,8 @@
 package com.plcoding.EXRTComposeMultiplatform.profile.domain
 
-import androidx.compose.ui.graphics.vector.ImageVector
-
 data class BottomNavigationItem(
     val title: String,
-    val selectedIcon: ImageVector,
-    val unselectedIcon: ImageVector,
+    val selectedIcon: Boolean,
     val hasNews: Boolean,
     val badgeCount: Int? = null
 )

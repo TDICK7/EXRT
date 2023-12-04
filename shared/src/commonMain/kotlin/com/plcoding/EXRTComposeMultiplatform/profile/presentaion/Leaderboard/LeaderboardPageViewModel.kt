@@ -26,10 +26,11 @@ class LeaderboardPageViewModel: ScreenModel {
 
 private val profiles = (1..20).map {
     Profile(
+        id = 123,
         email = "Trevordick07@outlook.com",
         firstName = "Trevor",
         lastName = "Dick",
-        gender = true,
+        gender = "Male",
         height = "6'7",
         username = "trevordick07",
         weight = 160,
