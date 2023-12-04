@@ -1,15 +1,16 @@
-CREATE TABLE profileEntity (
+CREATE TABLE ProfileEntity (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
     firstName TEXT NOT NULL,
     lastName TEXT NOT NULL,
     email TEXT NOT NULL,
     height TEXT NOT NULL,
+    weight INTEGER NOT NULL,
     gender TEXT NOT NULL,
     workoutTime INTEGER NOT NULL
 );
 
 getProfile:
 SELECT *
-FROM profileEntity
+FROM ProfileEntity
 ORDER BY username ASC;
