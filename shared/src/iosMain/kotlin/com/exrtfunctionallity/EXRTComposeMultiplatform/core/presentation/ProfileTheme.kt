@@ -1,7 +1,0 @@
-package com.exrtfunctionallity.EXRTComposeMultiplatform.core.presentation
-
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
-import com.exrtfunctionallity.contactscomposemultiplatform.ui.theme.DarkColorScheme
-import com.exrtfunctionallity.contactscomposemultiplatform.ui.theme.LightColorScheme
-

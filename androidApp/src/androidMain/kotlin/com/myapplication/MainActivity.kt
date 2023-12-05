@@ -3,7 +3,7 @@ package com.myapplication
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.exrtfunctionallity.EXRTComposeMultiplatform.App
+import com.exrtcoding.EXRTComposeMultiplatform.App
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
