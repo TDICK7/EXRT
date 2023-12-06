@@ -49,15 +49,25 @@ kotlin {
                 //SQL Delight
                 implementation("app.cash.sqldelight:coroutines-extensions:2.0.0")
 
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+                //Koin Dependency Injection
+                implementation("io.insert-koin:koin-core:3.5.0")
+                implementation("io.insert-koin:koin-compose:1.1.0")
+
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.1")
                 implementation("dev.icerock.moko:mvvm-core:0.16.1")
                 implementation("dev.icerock.moko:mvvm-compose:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+
+                //Voyager Navigation
                 implementation("cafe.adriel.voyager:voyager-navigator:1.0.0-rc10")
                 implementation("cafe.adriel.voyager:voyager-tab-navigator:1.0.0-rc10")
                 implementation("cafe.adriel.voyager:voyager-transitions:1.0.0-rc10")
+
+                //Kermit Logger
                 implementation("co.touchlab:kermit:2.0.2")
+
+                implementation("com.russhwolf:multiplatform-settings:1.1.1")
             }
         }
         val commonTest by getting {
