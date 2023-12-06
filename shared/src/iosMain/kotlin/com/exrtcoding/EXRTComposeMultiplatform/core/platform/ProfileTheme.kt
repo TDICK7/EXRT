@@ -1,2 +1,2 @@
-package com.exrtcoding.EXRTComposeMultiplatform.core.presentation
+package com.exrtcoding.EXRTComposeMultiplatform.core.platform
 

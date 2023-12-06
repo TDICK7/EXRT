@@ -1,4 +1,4 @@
-package com.exrtcoding.EXRTComposeMultiplatform.core.presentation.utils
+package com.exrtcoding.EXRTComposeMultiplatform.core.platform.utils
 
 
 

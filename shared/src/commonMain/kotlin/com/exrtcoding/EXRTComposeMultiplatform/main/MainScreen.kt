@@ -19,7 +19,7 @@ import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
 import com.exrtcoding.EXRTComposeMultiplatform.core.componets.EXRTTab
-import com.exrtcoding.EXRTComposeMultiplatform.core.presentation.utils.FilledIcon
+import com.exrtcoding.EXRTComposeMultiplatform.core.platform.utils.FilledIcon
 
 class MainScreen : Screen {
     @Composable

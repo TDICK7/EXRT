@@ -66,6 +66,8 @@ kotlin {
 
                 //Kermit Logger
                 implementation("co.touchlab:kermit:2.0.2")
+
+                implementation("com.russhwolf:multiplatform-settings:1.1.1")
             }
         }
         val commonTest by getting {
